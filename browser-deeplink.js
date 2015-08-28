@@ -186,11 +186,11 @@
             return;
         }
 
-        if (isAndroid() && !navigator.userAgent.match(/Firefox/)) {
-            var matches = uri.match(/([^:]+):\/\/(.+)$/i);
-            uri = "intent://" + matches[2] + "#Intent;scheme=" + matches[1];
-            uri += ";package=" + settings.android.appId + ";end";
-        }
+        //if (isAndroid() && !navigator.userAgent.match(/Firefox/)) {
+            //var matches = uri.match(/([^:]+):\/\/(.+)$/i);
+            //uri = "intent://" + matches[2] + "#Intent;scheme=" + matches[1];
+            //uri += ";package=" + settings.android.appId + ";end";
+        //}
 
         if (settings.fallback) {
             timeout = setTimeout(openAppStore(Date.now()), settings.delay);

@@ -146,7 +146,12 @@
             var link = getStoreLink();
             var wait = settings.delay + settings.delta;
             if (typeof link === "string" && (Date.now() - ts) < wait) {
-                window.location.href = link;
+                if(0 == link.indexOf("javascript:")){
+                    eval(link);
+                }else{
+                    window.location.href = link;                 
+                }
+                
             }
         }
     }
